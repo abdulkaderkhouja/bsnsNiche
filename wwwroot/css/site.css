@@ -1,0 +1,228 @@
+html {
+    font-size: 14px;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+    box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    float: none;
+    clear: none;
+    background-color: #edeff0;
+}
+
+
+.search-bar {
+    float: none;
+    clear: none;
+    width: 100%;
+    color: #555;
+    display: flex;
+    padding: 2px;
+    border-radius: 5px;
+    margin: 0 0 30px;
+}
+
+.one-search-area {
+    display: inline-block;
+    float: left;
+    width: 30%;
+    margin: 0;
+}
+
+input[type="search"] {
+    border: none;
+    background: #ffffff;
+    margin: 0.5%;
+    padding: 0.4%;
+    font-size: 14px;
+    color: inherit;
+    border: 1px solid transparent;
+    border-radius: inherit;
+}
+
+    input[type="search"]::placeholder {
+        color: #bbb;
+    }
+
+button[type="submit"] {
+    text-indent: -999px;
+    overflow: hidden;
+    width: 10%;
+    margin: 0.5%;
+    padding: 0.4%;
+    border: 1px solid transparent;
+    border-radius: inherit;
+    background: transparent url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E") no-repeat center;
+    cursor: pointer;
+    opacity: 0.7;
+    background-color: #0a6ed1;
+}
+
+    button[type="submit"]:hover {
+        opacity: 1;
+    }
+
+
+
+
+
+
+
+
+
+
+
+.side-actions-section {
+    display: inline-block;
+    float: left;
+    clear: left;
+    left: 0;
+    width: 20%;
+    height: auto;
+    background-color: inherit;
+    color: #000000;
+    margin: 2%;
+}
+
+
+.side-actions {
+    display: block;
+    float: none;
+    clear: none;
+    width: 100%;
+    height: auto;
+    color: #000000;
+    margin: 2% 0;
+}
+
+.side-actions-header {
+    display: block;
+    float: left;
+    clear: left;
+    width: 100%;
+    height: 10%;
+    padding: 2% 0;
+    font-weight: bold;
+    background-color: #c4c3c2;
+    color: #000000;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.all-side-actions {
+    display: block;
+    float: none;
+    clear: none;
+}
+
+.sub-side-action {
+    display: block;
+    float: left;
+    clear: left;
+    text-align: left;
+    width: 100%;
+    padding: 2% 0;
+    color: #52565a;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    font-size: 1em;
+    background-color: #ffffff;
+}
+
+.one-action {
+    display: block;
+    float: left;
+    clear: left;
+    text-align: left;
+    width: 100%;
+    padding: 2% 0;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    font-size: 1em;
+    background-color: #ffffff;
+}
+
+
+
+
+
+
+
+
+.main-actions-section {
+    display: inline-block;
+    float: right;
+    clear: right;
+    right: 0;
+    width: 70%;
+    height: auto;
+    background-color: inherit;
+    color: #000000;
+    margin: 2%;
+}
+
+
+.main-actions {
+    display: block;
+    float: none;
+    clear: none;
+    width: 100%;
+    height: auto;
+    color: #000000;
+    margin: 1% 0;
+}
+
+.main-actions-header {
+    display: block;
+    float: left;
+    clear: left;
+    width: 100%;
+    height: 5%;
+    padding: 1% 0;
+    font-weight: bold;
+    background-color: #c4c3c2;
+    color: #000000;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    text-align: left;
+    vertical-align: middle;
+}
+
+.all-main-actions {
+    display: block;
+    float: none;
+    clear: none;
+}
+
+.one-main-action {
+    display: block;
+    float: left;
+    clear: left;
+    text-align: left;
+    width: 100%;
+    padding: 1% 0;
+    text-decoration: none;
+    transition-duration: 0.4s;
+    font-size: 0.7em;
+    background-color: #ffffff;
+}

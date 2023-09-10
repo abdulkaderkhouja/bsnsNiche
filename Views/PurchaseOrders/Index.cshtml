@@ -1,0 +1,515 @@
+﻿@model IEnumerable<bsnsNiche.Models.PurchaseOrder>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Version)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order_Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Routing_Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PO_Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Receiving_Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ordered_Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Load_Create_Time)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Load_Update_Time)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Need_By_Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Retroactive_Effective_Date)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ERP_Supplier_ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ERP_Supplier)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Supplier_VAT_Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ship_To_Location_ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Payment_Terms)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Is_PunchOut_Item)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Is_Retroactive)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Is_Subcontractor)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Receipt_Based_Line)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Spot_Buy_Marketplace_Seller)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order_Confirmation_Status_Header)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Order_Confirmation_Status_Line)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Service_Order)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Requires_Service_Sheet)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Number_Substituted_OC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Number_Confirmed_With_Changes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Number_BackOrdered_OC)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Source_System)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Source_System_Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Originating_System)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Originating_System_Reference_ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Originating_System_Line_Number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PO_Line_Number)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Line_Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contract_Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Contract)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Closed_Order_Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Line_Closed_Status)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Description)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.buyerVatID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Bill_To_Location_ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Account_Assignment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Account_Type)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Profit_Center_ID_Reporting)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Profit_Center)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Article_ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Asset_Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Asset)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cost_Center_ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cost_Center)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Item_Category)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Internal_Order_Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Budget_Internal_Order)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Budget_Account_Group)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Commodity_ID_L1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Commodity_L1)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Commodity_ID_L2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Commodity_L2)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Commodity_ID_L3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Commodity_L3)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Commodity_ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Commodity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ERP_Commodity_ID)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ERP_Commodity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price_Unit_of_Measure)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Original_Currency_Code)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Unit_Conversion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Price_Unit_Quantity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PO_Line_Amount_Range_Minimum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PO_Line_Amount_Range_Maximum)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PO_Spend)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PO_Spend_Original_Currency)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Amount_Accepted)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Amount_Accepted_Original_Currency)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Amount_Invoiced)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Amount_Invoiced_Original_Currency)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tax_Amount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Tax_Amount_Invoiced)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Amount_Reconciled)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Amount_Reconciled_Original_Currency)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.PO_Quantity)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Version)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Order_Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Routing_Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PO_Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Receiving_Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ordered_Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Load_Create_Time)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Load_Update_Time)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Need_By_Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Retroactive_Effective_Date)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ERP_Supplier_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ERP_Supplier)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Supplier_VAT_Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ship_To_Location_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Payment_Terms)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Is_PunchOut_Item)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Is_Retroactive)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Is_Subcontractor)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Receipt_Based_Line)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Spot_Buy_Marketplace_Seller)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Order_Confirmation_Status_Header)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Order_Confirmation_Status_Line)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Service_Order)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Requires_Service_Sheet)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Number_Substituted_OC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Number_Confirmed_With_Changes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Number_BackOrdered_OC)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Source_System)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Source_System_Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Originating_System)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Originating_System_Reference_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Originating_System_Line_Number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PO_Line_Number)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Line_Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contract_Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Contract)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Closed_Order_Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Line_Closed_Status)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Description)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.buyerVatID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Bill_To_Location_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Account_Assignment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Account_Type)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Profit_Center_ID_Reporting)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Profit_Center)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Article_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Asset_Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Asset)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cost_Center_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cost_Center)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Item_Category)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Internal_Order_Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Budget_Internal_Order)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Budget_Account_Group)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Commodity_ID_L1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Commodity_L1)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Commodity_ID_L2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Commodity_L2)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Commodity_ID_L3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Commodity_L3)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Commodity_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Commodity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ERP_Commodity_ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ERP_Commodity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price_Unit_of_Measure)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Original_Currency_Code)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Unit_Conversion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Price_Unit_Quantity)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PO_Line_Amount_Range_Minimum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PO_Line_Amount_Range_Maximum)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PO_Spend)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PO_Spend_Original_Currency)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount_Accepted)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount_Accepted_Original_Currency)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount_Invoiced)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount_Invoiced_Original_Currency)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tax_Amount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Tax_Amount_Invoiced)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount_Reconciled)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Amount_Reconciled_Original_Currency)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.PO_Quantity)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Order_Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Order_Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Order_Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
